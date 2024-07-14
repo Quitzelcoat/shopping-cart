@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #323232;
+  background-color: transparent; /* Make the navbar background transparent */
   color: #d9edff;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 900;

@@ -1,0 +1,39 @@
+.mainPageText {
+  color: rgb(184, 222, 255);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  width: 300px;
+  height: 300px;
+}
+
+.mainPageText h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.mainPageText p {
+  margin: 0.5rem 0;
+  font-size: 18px;
+}
+
+.mainPageText button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 2px solid rgb(184, 222, 255);
+  color: rgb(184, 222, 255);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.mainPageText button:hover {
+  background-color: rgb(184, 222, 255);
+  color: rgb(1, 23, 42);
+}
