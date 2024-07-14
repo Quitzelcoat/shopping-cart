@@ -1,0 +1,23 @@
+.navbar {
+  background-color: #323232;
+  color: #d9edff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 900;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbarList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbarItem {
+  display: inline;
+  margin-right: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
