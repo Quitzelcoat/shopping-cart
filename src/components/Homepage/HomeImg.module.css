@@ -31,9 +31,32 @@
   color: rgb(184, 222, 255);
   cursor: pointer;
   font-family: inherit;
+  position: relative; /* Ensure proper positioning for the pseudo-element */
+  overflow: hidden; /* Hide overflowing content during animation */
+  transition: color 0.35s, border-color 0.35s; /* Smooth transition for color and border-color */
+}
+
+.mainPageText button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(184, 222, 255, 0.8),
+    rgba(184, 222, 255, 1)
+  );
+  transition: width 0.35s ease-in-out; /* Transition width for smooth slider effect */
+  z-index: -1;
+}
+
+.mainPageText button:hover::before {
+  width: 100%; /* Slide in from left to right on hover */
 }
 
 .mainPageText button:hover {
-  background-color: rgb(184, 222, 255);
-  color: rgb(1, 23, 42);
+  color: rgb(1, 23, 42); /* Text color change on hover */
+  z-index: 1;
 }

@@ -1,5 +1,5 @@
 import Image from "../../assets/images/leaf.jpg";
-import Images from "../../assets/images/flowers.jpg";
+import Images from "../../assets/images/leaves.jpg";
 import Navbar from "../../components/Navbar/Navbar";
 import HomeImgContent from "../../components/Homepage/HomeImgContent";
 import CollectionSec from "../../components/CollectionSection/CollectionSec";

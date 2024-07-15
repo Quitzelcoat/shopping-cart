@@ -1,22 +1,24 @@
 .collectionContainer {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Align items at the top */
   align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .collectionHeader {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 20%;
   text-align: center;
-
   border: 2px solid rgb(184, 222, 255);
   color: rgb(184, 222, 255);
   padding: 1rem 2rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   letter-spacing: 1px;
+}
+
+.collectionContainer h1 {
+  font-size: 24px; /* Adjusted for better visibility */
 }

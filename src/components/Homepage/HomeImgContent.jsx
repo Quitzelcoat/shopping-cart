@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./HomeImg.module.css";
 
 const HomeImgContent = () => {
@@ -10,7 +11,9 @@ const HomeImgContent = () => {
           resonating with the ghost of Desire, echoing the ache of emptiness.
         </p>
       </div>
-      <button>New Arival</button>
+      <Link to="/products">
+        <button>New Arival</button>
+      </Link>
     </div>
   );
 };

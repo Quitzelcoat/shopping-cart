@@ -1,12 +1,12 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import MainPage from "./pages/MainPage/MainPage";
 
-function App() {
+const App = () => {
   return (
     <>
-      <MainPage />
+      <Outlet />
     </>
   );
-}
+};
 
 export default App;

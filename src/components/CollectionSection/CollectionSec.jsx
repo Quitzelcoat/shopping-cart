@@ -1,13 +1,16 @@
 import styles from "./CollectionSec.module.css";
+import AllCards from "./AllCards/AllCards";
 
 const CollectionSec = () => {
   return (
     <div className={styles.collectionContainer}>
       <div className={styles.collectionHeader}>
-        <h1>Lost Melodies</h1>
+        <h1>Where Shadows Linger</h1>
       </div>
 
-      <div></div>
+      <div>
+        <AllCards />
+      </div>
     </div>
   );
 };

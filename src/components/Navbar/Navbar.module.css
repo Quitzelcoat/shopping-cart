@@ -10,6 +10,17 @@
   align-items: center;
 }
 
+.navLinkStyle {
+  color: #d9edff;
+  background-color: transparent; /* Make the navbar background transparent */
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.navLinkStyle:hover {
+  text-decoration: underline;
+}
+
 .navbarList {
   list-style-type: none;
   padding: 0;

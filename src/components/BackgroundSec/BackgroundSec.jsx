@@ -4,7 +4,7 @@ const BackgroundSection = ({ image, children }) => (
   <section
     style={{
       backgroundImage: `url(${image})`,
-      height: "100vh",
+      minHeight: "100vh",
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}
