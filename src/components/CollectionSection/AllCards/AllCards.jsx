@@ -16,7 +16,7 @@ const AllCards = () => {
     <div className={styles.AllCardsSet}>
       {cardData.map((card) => (
         <Link key={card.id} to="/products" className={styles.navLinkStyle}>
-          <div key={card.id} className={styles.cardsDisplay}>
+          <div className={styles.cardsDisplay}>
             <p>{card.title}</p>
           </div>
         </Link>
