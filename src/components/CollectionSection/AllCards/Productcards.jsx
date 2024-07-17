@@ -1,14 +1,30 @@
+import { Link } from "react-router-dom";
 import styles from "./Productcards.module.css";
+import useFetchProducts from "../../Apiproducts/ApiProducts";
+import LoadingSpinner from "../../LoadingSpinner/LoadSpinner";
 
 const Productcards = () => {
+  const { products, error, loading } = useFetchProducts();
+
+  if (loading) return <LoadingSpinner />;
+  if (error) return <p>A network error was encountered</p>;
+
   return (
-    <div>
-      <div className={styles.eachProdCards}>
-        <p>Product Title</p>
-        <p>Product text</p>
-        <div>Price: $669</div>
-        <button>Add to Cart</button>
-      </div>
+    <div className={styles.productCardsContainer}>
+      {products.map((product) => (
+        <div key={product.id} className={styles.eachProdCards}>
+          <img
+            src={product.image}
+            alt={product.title}
+            className={styles.productImage}
+          />
+          <Link to="/description" className={styles.prodDesc}>
+            <p className={styles.prodCatagory}>{product.category}</p>
+            <p>{product.title}</p>
+            <div>${product.price}</div>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 };
