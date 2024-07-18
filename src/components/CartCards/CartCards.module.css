@@ -1,0 +1,25 @@
+.cartPageContainer {
+  padding: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #06252a;
+}
+
+.cartItemList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(10, 51, 53, 0.1);
+  border-radius: 8px;
+}
+
+.cartItemImage {
+  height: 100px;
+  max-width: 100px;
+  margin-right: 1rem;
+}

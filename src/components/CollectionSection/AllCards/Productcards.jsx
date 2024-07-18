@@ -18,7 +18,7 @@ const Productcards = () => {
             alt={product.title}
             className={styles.productImage}
           />
-          <Link to="/description" className={styles.prodDesc}>
+          <Link to={`/description/${product.id}`} className={styles.prodDesc}>
             <p className={styles.prodCatagory}>{product.category}</p>
             <p>{product.title}</p>
             <div>${product.price}</div>

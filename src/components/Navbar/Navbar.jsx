@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import styles from "./Navbar.module.css";
+import { CartContext } from "../CartContext/CartContext";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { cartCount } = useContext(CartContext);
 
   const navItems = [
     { id: uuidv4(), title: "Home", path: "/" },
@@ -48,6 +50,7 @@ const Navbar = () => {
       <div>
         <Link to="/cart" className={styles.navLinkStyle}>
           Cart
+          <span>{cartCount}</span>
         </Link>
       </div>
     </nav>
