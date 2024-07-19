@@ -1,11 +1,30 @@
 import { useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
-
 import { CartContext } from "../CartContext/CartContext";
 import styles from "./CartCards.module.css";
 
 const CartCards = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, removeFromCart, updateCartQuantity } = useContext(CartContext);
+
+  if (!cart) {
+    throw new Error("CartContext must be used within a CartProvider");
+  }
+
+  const handleIncrement = (item) => {
+    updateCartQuantity(item.id, item.quantity + 1);
+  };
+
+  const handleDecrement = (item) => {
+    if (item.quantity > 1) {
+      updateCartQuantity(item.id, item.quantity - 1);
+    } else {
+      removeFromCart(item.id);
+    }
+  };
+
+  const handleRemove = (item) => {
+    removeFromCart(item.id);
+  };
 
   return (
     <>
@@ -27,23 +46,28 @@ const CartCards = () => {
                   <h2>{item.title}</h2>
                   <p>{item.description}</p>
                   <div>Price: ${item.price}</div>
-                  <div>
-                    <p>-</p>
-                    <p>0</p>
-                    <p>+</p>
+                  <div className={styles.productsCount}>
+                    <p onClick={() => handleDecrement(item)}>-</p>
+                    <span>{item.quantity}</span>
+                    <p onClick={() => handleIncrement(item)}>+</p>
                   </div>
                 </div>
 
-                <div>
-                  <p>x</p>
-                  <p>Each Product Total Price</p>
+                <div className={styles.removeDesign}>
+                  <p onClick={() => handleRemove(item)}>x</p>
+                  <div>Total: ${(item.price * item.quantity).toFixed(2)}</div>
                 </div>
               </li>
             ))}
           </ul>
         )}
       </div>
-      <dov>Total Price</dov>
+      <div className={styles.totalPrice}>
+        Total: $
+        {cart
+          .reduce((total, item) => total + item.price * item.quantity, 0)
+          .toFixed(2)}
+      </div>
     </>
   );
 };

@@ -19,7 +19,6 @@
 
 .navLinkStyle {
   color: #d9edff;
-  background-color: transparent;
   letter-spacing: 2px;
   text-decoration: none;
 }
@@ -43,4 +42,12 @@
 .scrolled {
   background-color: rgba(13, 49, 42, 0.9);
   box-shadow: 10px 2px 19px rgba(13, 49, 42, 0.8);
+}
+
+.itemCounter {
+  /* border: 2px solid black; */
+  font-size: 12px;
+  border-radius: 100%;
+  padding: 5px;
+  /* background-color: rgba(13, 49, 42, 0.8); */
 }
